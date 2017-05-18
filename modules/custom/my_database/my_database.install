@@ -1,0 +1,43 @@
+<?php
+  /**
+ * Implements hook_schema().
+ */
+function my_database_schema() {
+  $schema['custom_table'] = array(
+    'description' => 'Custom table from My database module.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a record.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'number' => array(
+        'description' => 'Field for integer number.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'teaser' => array(
+        'description' => 'Teaser field.',
+        'type' => 'varchar',
+        'length' => 150,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'text' => array(
+        'description' => 'Text field.',
+        'type' => 'text',
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
+
+
+function my_database_uninstall() {
+  drupal_uninstall_schema('my_database');
+}

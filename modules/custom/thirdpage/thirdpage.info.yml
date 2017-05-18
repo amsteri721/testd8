@@ -1,0 +1,6 @@
+name: Page 403
+description: This is my page 403
+type: module
+core: 8.x
+version: 1.0
+package: Examples

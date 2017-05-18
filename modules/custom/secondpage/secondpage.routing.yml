@@ -1,0 +1,12 @@
+secondpage.hellopage:
+  # Указываем путь роута, с лидирующим слешем.
+  path: '/page-404'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\secondpage\Controller\secondpageController::secondPage'
+  # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    _permission: 'access content'

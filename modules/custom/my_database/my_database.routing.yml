@@ -1,0 +1,7 @@
+my_database.settings:
+  path: '/my_database/insert'
+  defaults:
+    _title: 'Config form'
+    _form: 'Drupal\my_database\Form\ConfigForm'
+  requirements:
+    _permission: 'access content'

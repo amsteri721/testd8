@@ -1,0 +1,4 @@
+view testpage:
+  title: 'View testpage'
+  description: 'View test page "Hello world".'
+  restrict access: TRUE

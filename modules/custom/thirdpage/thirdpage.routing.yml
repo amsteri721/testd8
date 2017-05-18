@@ -1,0 +1,12 @@
+thirdpage.hellopage:
+  # Указываем путь роута, с лидирующим слешем.
+  path: '/page-403'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\thirdpage\Controller\thirdpageController::thirdPage'
+  # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    _permission: 'access content'

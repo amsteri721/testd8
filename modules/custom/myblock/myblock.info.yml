@@ -1,0 +1,6 @@
+name: myblock
+description: is my first block
+type: module
+core: 8.x
+version: 1.0
+package: Examples

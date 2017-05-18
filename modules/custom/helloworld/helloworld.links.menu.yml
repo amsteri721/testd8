@@ -1,0 +1,5 @@
+my_database.view:
+  title: Add content
+  description: 'This is a demo link'
+  parent: system.admin
+  route_name: my_database.form

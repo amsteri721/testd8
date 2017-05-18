@@ -1,0 +1,22 @@
+my_database.form:
+  path: '/my-data/insert'
+  defaults:
+    _title: 'My database'
+    # Подгружаем форму по неймспейсу.
+    _form: '\Drupal\helloworld\Form\MyDatabase'
+  requirements:
+    _permission: 'access content'
+
+my_database.demo:
+  # Указываем путь роута, с лидирующим слешем.
+  path: '/my-data'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\helloworld\Controller\helloworldController::content'
+  # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    _permission: 'access content'
+

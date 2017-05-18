@@ -1,0 +1,6 @@
+name: Page 404
+description: Page 404
+type: module
+core: 8.x
+version: 1.0
+package: Examples
