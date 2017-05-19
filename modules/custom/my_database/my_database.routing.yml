@@ -5,3 +5,4 @@ my_database.settings:
     _form: 'Drupal\my_database\Form\ConfigForm'
   requirements:
     _permission: 'access content'
+

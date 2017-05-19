@@ -7,16 +7,20 @@ my_database.form:
   requirements:
     _permission: 'access content'
 
-my_database.demo:
-  # Указываем путь роута, с лидирующим слешем.
-  path: '/my-data'
-  # Значения по умолчанию
+my_database.delete:
+  path: '/my-data/{id}/delete'
   defaults:
-    # Функция контроллера отвечающая за содержимое.
-    _form: '\Drupal\helloworld\Form\MyDatabaseList'
-  # В данном разделе указываются необходимые требования для роута.
+    _title: 'Delete'
+    # Подгружаем форму по неймспейсу.
+    _form: '\Drupal\helloworld\Form\DeleteForm'
   requirements:
-    # Мы будем показывать страницу только тем, у кого есть права на просмотр
-    # содержимого.
     _permission: 'access content'
 
+my_database.edit:
+  path: '/my-data/{id}/edit'
+  defaults:
+    _title: 'Delete'
+    # Подгружаем форму по неймспейсу.
+    _form: '\Drupal\helloworld\Form\EditForm'
+  requirements:
+    _permission: 'access content'

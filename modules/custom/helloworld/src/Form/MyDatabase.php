@@ -8,6 +8,7 @@ namespace Drupal\helloworld\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 
 class MyDatabase extends FormBase {
@@ -44,7 +45,7 @@ class MyDatabase extends FormBase {
           ),
           'Action' => array(
             '#type' => 'murkup',
-            '#markup' => t('Delete<br>Edit'),
+            '#markup' => \Drupal::l(t('Delete'), Url::fromUri("internal:/my-data/$item->id/delete")) . '<br>' . \Drupal::l(t('Edit'), Url::fromUri("internal:/my-data/$item->id/edit")),
           ),
         );
       }
