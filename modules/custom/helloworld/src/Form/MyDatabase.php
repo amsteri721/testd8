@@ -17,6 +17,39 @@ class MyDatabase extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $data = db_query('SELECT * FROM {custom_table}')->fetchAllAssoc('id');
+    if ($data) {
+      $form['data'] = array(
+        '#type' => 'table',
+        '#caption' => $this->t('Table Data'),
+        '#header' => array($this->t('id'), $this->t('Number'), $this->t('Teaser'), $this->t('Text'), $this->t('Action')),
+      );
+      foreach ($data as $item) {
+        $form['data'][] = array(
+          'id' => array(
+            '#type' => 'murkup',
+            '#markup' => t($item->id),
+          ),
+          'number' => array(
+            '#type' => 'murkup',
+            '#markup' => t($item->number),
+          ),
+          'teaser' => array(
+            '#type' => 'murkup',
+            '#markup' => t($item->teaser),
+          ),
+          'text' => array(
+            '#type' => 'murkup',
+            '#markup' => t($item->text),
+          ),
+          'Action' => array(
+            '#type' => 'murkup',
+            '#markup' => t('Delete<br>Edit'),
+          ),
+        );
+      }
+    }
+
     $form['number'] = array(
       '#title' => $this->t('Number'),
       '#type' => 'textfield',
@@ -42,6 +75,7 @@ class MyDatabase extends FormBase {
       '#value' => $this->t('Send'),
       '#button_type' => 'primary',
     );
+
     return $form;
   }
 

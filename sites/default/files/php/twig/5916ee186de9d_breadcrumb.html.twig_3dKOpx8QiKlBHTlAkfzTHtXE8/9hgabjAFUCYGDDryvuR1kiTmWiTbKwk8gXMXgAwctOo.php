@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/breadcrumb.html.twig */
-class __TwigTemplate_2a5732f7ff358dcf6c16c3eb7f4a67f58c6c1520c2aab9d7b71f117932626cb4 extends Twig_Template
+/* themes/contrib/bootstrap/templates/system/breadcrumb.html.twig */
+class __TwigTemplate_11d795884cf105b6d8e80c2e80d74e4a6c473410ee60ac9f6711196b6028b665 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,14 +15,14 @@ class __TwigTemplate_2a5732f7ff358dcf6c16c3eb7f4a67f58c6c1520c2aab9d7b71f1179326
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 10, "for" => 14);
-        $filters = array("t" => 12);
+        $tags = array("if" => 12, "for" => 14);
+        $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
                 array('if', 'for'),
-                array('t'),
+                array(),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,22 +39,19 @@ class __TwigTemplate_2a5732f7ff358dcf6c16c3eb7f4a67f58c6c1520c2aab9d7b71f1179326
             throw $e;
         }
 
-        // line 10
+        // line 12
         if (($context["breadcrumb"] ?? null)) {
-            // line 11
-            echo "  <nav class=\"breadcrumb\" role=\"navigation\" aria-labelledby=\"system-breadcrumb\">
-    <h2 id=\"system-breadcrumb\" class=\"visually-hidden\">";
-            // line 12
-            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Breadcrumb")));
-            echo "</h2>
-    <ol>
+            // line 13
+            echo "  <ol class=\"breadcrumb\">
     ";
             // line 14
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["breadcrumb"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
                 // line 15
-                echo "      <li>
+                echo "      <li ";
+                echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["item"], "attributes", array()), "html", null, true));
+                echo ">
         ";
                 // line 16
                 if ($this->getAttribute($context["item"], "url", array())) {
@@ -80,15 +77,14 @@ class __TwigTemplate_2a5732f7ff358dcf6c16c3eb7f4a67f58c6c1520c2aab9d7b71f1179326
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 23
-            echo "    </ol>
-  </nav>
+            echo "  </ol>
 ";
         }
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/breadcrumb.html.twig";
+        return "themes/contrib/bootstrap/templates/system/breadcrumb.html.twig";
     }
 
     public function isTraitable()
@@ -98,7 +94,7 @@ class __TwigTemplate_2a5732f7ff358dcf6c16c3eb7f4a67f58c6c1520c2aab9d7b71f1179326
 
     public function getDebugInfo()
     {
-        return array (  83 => 23,  76 => 21,  70 => 19,  62 => 17,  60 => 16,  57 => 15,  53 => 14,  48 => 12,  45 => 11,  43 => 10,);
+        return array (  80 => 23,  73 => 21,  67 => 19,  59 => 17,  57 => 16,  52 => 15,  48 => 14,  45 => 13,  43 => 12,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -111,6 +107,6 @@ class __TwigTemplate_2a5732f7ff358dcf6c16c3eb7f4a67f58c6c1520c2aab9d7b71f1179326
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/navigation/breadcrumb.html.twig", "/var/www/d8max/web/core/themes/classy/templates/navigation/breadcrumb.html.twig");
+        return new Twig_Source("", "themes/contrib/bootstrap/templates/system/breadcrumb.html.twig", "/var/www/d8max/web/themes/contrib/bootstrap/templates/system/breadcrumb.html.twig");
     }
 }

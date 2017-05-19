@@ -13,7 +13,7 @@ my_database.demo:
   # Значения по умолчанию
   defaults:
     # Функция контроллера отвечающая за содержимое.
-    _controller: '\Drupal\helloworld\Controller\helloworldController::content'
+    _form: '\Drupal\helloworld\Form\MyDatabaseList'
   # В данном разделе указываются необходимые требования для роута.
   requirements:
     # Мы будем показывать страницу только тем, у кого есть права на просмотр

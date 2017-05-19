@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/dataset/table.html.twig */
-class __TwigTemplate_98cf6ee9c325be56e5f6e2b50b209532e42534eaeb86ca76b1fbc0eee1a03602 extends Twig_Template
+/* themes/contrib/bootstrap/templates/system/table.html.twig */
+class __TwigTemplate_bfb6c4a12701874021619cb22385715f894456b1abe6b24d09dffa2d66f6b9d5 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_98cf6ee9c325be56e5f6e2b50b209532e42534eaeb86ca76b1fbc0eee1a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 43, "for" => 47, "set" => 64);
+        $tags = array("if" => 49, "set" => 53, "for" => 67);
         $filters = array();
-        $functions = array("cycle" => 81);
+        $functions = array("cycle" => 99);
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array('if', 'for', 'set'),
+                array('if', 'set', 'for'),
                 array(),
                 array('cycle')
             );
@@ -39,39 +39,52 @@ class __TwigTemplate_98cf6ee9c325be56e5f6e2b50b209532e42534eaeb86ca76b1fbc0eee1a
             throw $e;
         }
 
-        // line 42
+        // line 49
+        if (($context["responsive"] ?? null)) {
+            // line 50
+            echo "  <div class=\"table-responsive\">
+";
+        }
+        // line 53
+        $context["classes"] = array(0 => "table", 1 => ((        // line 55
+($context["bordered"] ?? null)) ? ("table-bordered") : ("")), 2 => ((        // line 56
+($context["condensed"] ?? null)) ? ("table-condensed") : ("")), 3 => ((        // line 57
+($context["hover"] ?? null)) ? ("table-hover") : ("")), 4 => ((        // line 58
+($context["striped"] ?? null)) ? ("table-striped") : ("")), 5 => ((        // line 59
+($context["sticky"] ?? null)) ? ("sticky-enabled") : ("")));
+        // line 62
         echo "<table";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => ($context["classes"] ?? null)), "method"), "html", null, true));
         echo ">
   ";
-        // line 43
+        // line 63
         if (($context["caption"] ?? null)) {
-            // line 44
+            // line 64
             echo "    <caption>";
             echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["caption"] ?? null), "html", null, true));
             echo "</caption>
   ";
         }
-        // line 46
+        // line 66
         echo "
   ";
-        // line 47
+        // line 67
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["colgroups"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["colgroup"]) {
-            // line 48
+            // line 68
             echo "    ";
             if ($this->getAttribute($context["colgroup"], "cols", array())) {
-                // line 49
+                // line 69
                 echo "      <colgroup";
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["colgroup"], "attributes", array()), "html", null, true));
                 echo ">
         ";
-                // line 50
+                // line 70
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["colgroup"], "cols", array()));
                 foreach ($context['_seq'] as $context["_key"] => $context["col"]) {
-                    // line 51
+                    // line 71
                     echo "          <col";
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["col"], "attributes", array()), "html", null, true));
                     echo " />
@@ -80,70 +93,70 @@ class __TwigTemplate_98cf6ee9c325be56e5f6e2b50b209532e42534eaeb86ca76b1fbc0eee1a
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['col'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 53
+                // line 73
                 echo "      </colgroup>
     ";
             } else {
-                // line 55
+                // line 75
                 echo "      <colgroup";
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["colgroup"], "attributes", array()), "html", null, true));
                 echo " />
     ";
             }
-            // line 57
+            // line 77
             echo "  ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['colgroup'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 58
+        // line 78
         echo "
   ";
-        // line 59
+        // line 79
         if (($context["header"] ?? null)) {
-            // line 60
+            // line 80
             echo "    <thead>
       <tr>
         ";
-            // line 62
+            // line 82
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["header"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["cell"]) {
-                // line 63
-                echo "          ";
-                // line 64
-                $context["cell_classes"] = array(0 => (($this->getAttribute(                // line 65
-$context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
-                // line 68
-                echo "          <";
+                // line 83
+                echo "        ";
+                // line 84
+                $context["cell_classes"] = array(0 => (($this->getAttribute(                // line 85
+$context["cell"], "active_table_sort", array())) ? ("active") : ("")));
+                // line 88
+                echo "        <";
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "tag", array()), "html", null, true));
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($this->getAttribute($context["cell"], "attributes", array()), "addClass", array(0 => ($context["cell_classes"] ?? null)), "method"), "html", null, true));
                 echo ">";
-                // line 69
+                // line 89
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "content", array()), "html", null, true));
-                // line 70
+                // line 90
                 echo "</";
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "tag", array()), "html", null, true));
                 echo ">
-        ";
+      ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cell'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 72
+            // line 92
             echo "      </tr>
     </thead>
   ";
         }
-        // line 75
+        // line 95
         echo "
   ";
-        // line 76
+        // line 96
         if (($context["rows"] ?? null)) {
-            // line 77
+            // line 97
             echo "    <tbody>
       ";
-            // line 78
+            // line 98
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["rows"] ?? null));
             $context['loop'] = array(
@@ -160,28 +173,26 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-                // line 79
+                // line 99
                 echo "        ";
-                // line 80
-                $context["row_classes"] = array(0 => (( !                // line 81
-($context["no_striping"] ?? null)) ? (twig_cycle(array(0 => "odd", 1 => "even"), $this->getAttribute($context["loop"], "index0", array()))) : ("")));
-                // line 84
+                $context["row_classes"] = array(0 => twig_cycle(array(0 => "odd", 1 => "even"), $this->getAttribute($context["loop"], "index0", array())));
+                // line 100
                 echo "        <tr";
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($this->getAttribute($context["row"], "attributes", array()), "addClass", array(0 => ($context["row_classes"] ?? null)), "method"), "html", null, true));
                 echo ">
           ";
-                // line 85
+                // line 101
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["row"], "cells", array()));
                 foreach ($context['_seq'] as $context["_key"] => $context["cell"]) {
-                    // line 86
+                    // line 102
                     echo "            <";
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "tag", array()), "html", null, true));
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "attributes", array()), "html", null, true));
                     echo ">";
-                    // line 87
+                    // line 103
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "content", array()), "html", null, true));
-                    // line 88
+                    // line 104
                     echo "</";
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "tag", array()), "html", null, true));
                     echo ">
@@ -190,7 +201,7 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cell'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 90
+                // line 106
                 echo "        </tr>
       ";
                 ++$context['loop']['index0'];
@@ -205,16 +216,16 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 92
+            // line 108
             echo "    </tbody>
   ";
-        } elseif (        // line 93
+        } elseif (        // line 109
 ($context["empty"] ?? null)) {
-            // line 94
+            // line 110
             echo "    <tbody>
       <tr class=\"odd\">
         <td colspan=\"";
-            // line 96
+            // line 112
             echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["header_columns"] ?? null), "html", null, true));
             echo "\" class=\"empty message\">";
             echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["empty"] ?? null), "html", null, true));
@@ -223,33 +234,33 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
     </tbody>
   ";
         }
-        // line 100
+        // line 116
         echo "  ";
         if (($context["footer"] ?? null)) {
-            // line 101
+            // line 117
             echo "    <tfoot>
       ";
-            // line 102
+            // line 118
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["footer"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-                // line 103
+                // line 119
                 echo "        <tr";
                 echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["row"], "attributes", array()), "html", null, true));
                 echo ">
           ";
-                // line 104
+                // line 120
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["row"], "cells", array()));
                 foreach ($context['_seq'] as $context["_key"] => $context["cell"]) {
-                    // line 105
+                    // line 121
                     echo "            <";
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "tag", array()), "html", null, true));
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "attributes", array()), "html", null, true));
                     echo ">";
-                    // line 106
+                    // line 122
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "content", array()), "html", null, true));
-                    // line 107
+                    // line 123
                     echo "</";
                     echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["cell"], "tag", array()), "html", null, true));
                     echo ">
@@ -258,25 +269,31 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cell'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 109
+                // line 125
                 echo "        </tr>
       ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 111
+            // line 127
             echo "    </tfoot>
   ";
         }
-        // line 113
+        // line 129
         echo "</table>
 ";
+        // line 130
+        if (($context["responsive"] ?? null)) {
+            // line 131
+            echo "  </div>
+";
+        }
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/dataset/table.html.twig";
+        return "themes/contrib/bootstrap/templates/system/table.html.twig";
     }
 
     public function isTraitable()
@@ -286,7 +303,7 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
 
     public function getDebugInfo()
     {
-        return array (  273 => 113,  269 => 111,  262 => 109,  253 => 107,  251 => 106,  246 => 105,  242 => 104,  237 => 103,  233 => 102,  230 => 101,  227 => 100,  218 => 96,  214 => 94,  212 => 93,  209 => 92,  194 => 90,  185 => 88,  183 => 87,  178 => 86,  174 => 85,  169 => 84,  167 => 81,  166 => 80,  164 => 79,  147 => 78,  144 => 77,  142 => 76,  139 => 75,  134 => 72,  125 => 70,  123 => 69,  118 => 68,  116 => 65,  115 => 64,  113 => 63,  109 => 62,  105 => 60,  103 => 59,  100 => 58,  94 => 57,  88 => 55,  84 => 53,  75 => 51,  71 => 50,  66 => 49,  63 => 48,  59 => 47,  56 => 46,  50 => 44,  48 => 43,  43 => 42,);
+        return array (  289 => 131,  287 => 130,  284 => 129,  280 => 127,  273 => 125,  264 => 123,  262 => 122,  257 => 121,  253 => 120,  248 => 119,  244 => 118,  241 => 117,  238 => 116,  229 => 112,  225 => 110,  223 => 109,  220 => 108,  205 => 106,  196 => 104,  194 => 103,  189 => 102,  185 => 101,  180 => 100,  177 => 99,  160 => 98,  157 => 97,  155 => 96,  152 => 95,  147 => 92,  138 => 90,  136 => 89,  131 => 88,  129 => 85,  128 => 84,  126 => 83,  122 => 82,  118 => 80,  116 => 79,  113 => 78,  107 => 77,  101 => 75,  97 => 73,  88 => 71,  84 => 70,  79 => 69,  76 => 68,  72 => 67,  69 => 66,  63 => 64,  61 => 63,  56 => 62,  54 => 59,  53 => 58,  52 => 57,  51 => 56,  50 => 55,  49 => 53,  45 => 50,  43 => 49,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -299,6 +316,6 @@ $context["cell"], "active_table_sort", array())) ? ("is-active") : ("")));
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/dataset/table.html.twig", "/var/www/d8max/web/core/themes/classy/templates/dataset/table.html.twig");
+        return new Twig_Source("", "themes/contrib/bootstrap/templates/system/table.html.twig", "/var/www/d8max/web/themes/contrib/bootstrap/templates/system/table.html.twig");
     }
 }

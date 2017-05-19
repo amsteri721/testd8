@@ -1,0 +1,4 @@
+service:
+helloworld.db_logic:
+  class: Drupal\helloworld\MyDBLogic
+  arguments: ['@database']

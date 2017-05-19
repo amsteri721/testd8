@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/container.html.twig */
-class __TwigTemplate_421f7116dc6af52c7c8928df8f050a76e063ce912cc4da3fb4eb8435a87b6619 extends Twig_Template
+/* themes/contrib/bootstrap/templates/input/textarea.html.twig */
+class __TwigTemplate_d6a3df48c887a95d487133f090a73da62f0e8340d9f88259ffd72fa91a426a4f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,7 +15,7 @@ class __TwigTemplate_421f7116dc6af52c7c8928df8f050a76e063ce912cc4da3fb4eb8435a87
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("set" => 23);
+        $tags = array("set" => 19);
         $filters = array();
         $functions = array();
 
@@ -39,22 +39,27 @@ class __TwigTemplate_421f7116dc6af52c7c8928df8f050a76e063ce912cc4da3fb4eb8435a87
             throw $e;
         }
 
-        // line 23
-        $context["classes"] = array(0 => ((        // line 24
-($context["has_parent"] ?? null)) ? ("js-form-wrapper") : ("")), 1 => ((        // line 25
-($context["has_parent"] ?? null)) ? ("form-wrapper") : ("")));
-        // line 28
+        // line 19
+        $context["classes"] = array(0 => "form-textarea", 1 => "form-control", 2 => ((        // line 22
+($context["resizable"] ?? null)) ? (("resize-" . ($context["resizable"] ?? null))) : ("")), 3 => ((        // line 23
+($context["required"] ?? null)) ? ("required") : ("")));
+        // line 26
         echo "<div";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["wrapper_attributes"] ?? null), "addClass", array(0 => "form-textarea-wrapper"), "method"), "html", null, true));
+        echo ">
+  <textarea";
+        // line 27
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => ($context["classes"] ?? null)), "method"), "html", null, true));
         echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
-        echo "</div>
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["value"] ?? null), "html", null, true));
+        echo "</textarea>
+</div>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/container.html.twig";
+        return "themes/contrib/bootstrap/templates/input/textarea.html.twig";
     }
 
     public function isTraitable()
@@ -64,7 +69,7 @@ class __TwigTemplate_421f7116dc6af52c7c8928df8f050a76e063ce912cc4da3fb4eb8435a87
 
     public function getDebugInfo()
     {
-        return array (  47 => 28,  45 => 25,  44 => 24,  43 => 23,);
+        return array (  52 => 27,  47 => 26,  45 => 23,  44 => 22,  43 => 19,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -77,6 +82,6 @@ class __TwigTemplate_421f7116dc6af52c7c8928df8f050a76e063ce912cc4da3fb4eb8435a87
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/form/container.html.twig", "/var/www/d8max/web/core/themes/classy/templates/form/container.html.twig");
+        return new Twig_Source("", "themes/contrib/bootstrap/templates/input/textarea.html.twig", "/var/www/d8max/web/themes/contrib/bootstrap/templates/input/textarea.html.twig");
     }
 }
