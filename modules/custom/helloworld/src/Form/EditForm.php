@@ -27,20 +27,20 @@ class EditForm extends FormBase {
       '#title' => $this->t('Number'),
       '#type' => 'textfield',
       '#maxlength' => 10,
-      '#value' => $data['number'],
+      '#default_value' => $data['number'],
       '#description' => t('Only numbers'),
       '#required' => TRUE,
     );
     $form['teaser'] = array(
       '#title' => $this->t('Teaser'),
       '#type' => 'textfield',
-      '#value' => $data['teaser'],
+      '#default_value' => $data['teaser'],
       '#maxlength' => 150,
       '#required' => TRUE,
     );
     $form['text'] = array(
       '#title' => $this->t('Text'),
-      '#value' => $data['text'],
+      '#default_value' => $data['text'],
       '#type' => 'textarea',
       '#required' => TRUE,
     );
